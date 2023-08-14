@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios DOM</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="conection-toast" class="conection-toast">
+        <h1></h1>
+    </div>
+
+    <button id="btn-opener" class="btn-opener">
+        <div class="list-up">
+            <img src="assets/svg/list-up.svg" alt="">
+        </div>
+        <div class="list-down">
+            <img src="assets/svg/list-down.svg" alt="">
+        </div>
+    </button>
+    <button id="btn-scroll" class="btn-scroll">
+        <img src="assets/svg/arrow-up.svg" alt="">
+    </button>
+    <button id="btn-theme" class="btn-theme">
+        <div id="moon-theme" class="moon-theme">
+            <img src="assets/svg/moon-stars.svg" alt="">
+        </div>
+        <div id="sun-theme" class="sun-theme">
+            <img src="assets/svg/sun.svg" alt="">
+        </div>
+    </button>
+    <nav id="nav-menu" class="nav-menu">
+        <ul id="list-link">
+            <li class="list-link">
+                <a class="link" href="#section1">
+                    Reloj Digital y Alarma
+                </a>
+            </li>
+            <li class="list-link">
+                <a class="link" href="#section2">
+                    Eventos con el teclado
+                </a>
+            </li>
+            <li class="list-link">
+                <a class="link" href="#section3">
+                    Countdown
+                </a>
+            </li>
+            <li class="list-link">
+                <a class="link" href="#section4">
+                    Responsive con JavaScript
+                </a>
+            </li>
+            <li class="list-link">
+                <a class="link" href="#section5">
+                    Responsive Tester
+                </a>
+            </li>
+            <li class="list-link">
+                <a class="link" href="#section6">
+                    Detección de dispositivos
+                </a>
+            </li>
+            <li class="list-link">
+                <a class="link" href="#section7">
+                    Detección de la conexión
+                </a>
+            </li>
+            <li class="list-link">
+                <a class="link" href="#section8">
+                    Detección de la cámara web
+                </a>
+            </li>
+            <li class="list-link">
+                <a class="link" href="#section9">
+                    Geolocalización
+                </a>
+            </li>
+            <li class="list-link">
+                <a class="link" href="#section10">
+                    Buscador
+                </a>
+            </li>
+            <li class="list-link">
+                <a class="link" href="#section11">
+                    Sorteo digital
+                </a>
+            </li>
+            <li class="list-link">
+                <a class="link" href="#section12">
+                    Responsive Slider
+                </a>
+            </li>
+            <li class="list-link">
+                <a class="link" href="#section13">
+                    Video Inteligente
+                </a>
+            </li>
+            <li class="list-link">
+                <a class="link" href="#section14">
+                    Validacion de formulario
+                </a>
+            </li>
+            <li class="list-link">
+                <a class="link" href="#section15">
+                    Narrador
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Ejercicios del DOM</h1>
+    </header>
+    <main>
+
+        <section id="section1">
+            <div class="watch-container">
+                <div>
+                    <h1 id="line"></h1>
+                    <h2>Reloj Digital </h2>
+                    <div class="buttons-container">
+                        <button class="btn" id="show-watch">Mostrar Reloj</button>
+                        <button class="btn" id="hide-watch">Ocultar Reloj</button>
+                    </div>
+                </div>
+                <div>
+                    <h2> Alarma Sonora</h2>
+                    <div class="buttons-container">
+                        <button class="btn" id="start-alarm">Iniciar Alarma</button>
+                        <button class="btn" id="stop-alarm">Detener Alarma</button>
+                    </div>
+                </div>
+            </div>
+            <p id="watch"></p>
+            <audio id="alarm" loop src="assets/audio/alarm.mp3"></audio>
+        </section>
+
+        <section id="section2">
+            <h2> Eventos con el teclado </h2>
+            <div id="game-box" class="game-box">
+                <div id="character" class="character">🤖</div>
+            </div>
+            <div class="buttons-container">
+                <button id="game-button" class="btn">
+                    <svg fill="none" height="10" viewBox="0 0 24 24" width="10" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="m15.8351 11.6296-6.63043-6.4297c-.41373-.40121-1.20467-.15801-1.20467.3704v12.8594c0 .5284.79094.7716 1.20467.3704l6.63043-6.4297c.2199-.2131.2198-.5277 0-.7408z"
+                            fill="#1c274c" />
+                    </svg>
+                    Jugar</button>
+                <button id="stop-game" class="btn">Dejar de jugar</button>
+
+            </div>
+        </section>
+
+        <section id="section3">
+            <h1 id="message-countdown"></h1>
+            <h2> Countdown </h2>
+            <h3 id="countdown">- días - horas - minutos - segundos</h3>
+            <label for="date-input">Fecha:
+                <input type="date" id="date-input">
+            </label>
+            <div>
+                <button class="btn" id="start-countdown">Iniciar cuenta</button>
+                <button class="btn" id="restart-countdown">Reiniciar</button>
+            </div>
+            <audio id="confetti-audio" src="assets/audio/confetti.mp3"></audio>
+        </section>
+
+        <section id="section4">
+            <h2> Responsive con JavaScript </h2>
+            <div id="youtube"></div>
+            <div id="maps"></div>
+
+        </section>
+
+        <section id="section5">
+            <h2> Responsive Tester </h2>
+            <div class="tester-form">
+                <label for="url">
+                    URL
+                </label>
+                <input id="url" class="form-input" placeholder="URL" type="text" name="url">
+                <label for="width">
+                    Ancho
+                </label>
+                <input id="width" class="form-input" placeholder="Ancho" type="text" name="width">
+                <label for="height">
+                    Alto
+                </label>
+                <input id="height" class="form-input" placeholder="Alto" type="text" name="height">
+                <div class="buttons-container">
+                    <button id="open-tab" class="btn">Probar</button>
+                    <button id="close-tab" class="btn">Cerrar</button>
+                </div>
+            </div>
+        </section>
+        <section id="section6">
+            <h2> Detección de dispositivos </h2>
+            <div class="user-agent-container">
+                <p id="user-agent">User Agent: --</p>
+                <p id="platform">Plataforma: -- &nbsp;&nbsp;&nbsp;&nbsp; Navegador: --</p>
+            </div>
+
+        </section>
+        <section id="section7">
+            <h2> Detección de la conexión </h2>
+            <h3 id="is-conected-text">Estado de la conexión: <span class="success"> Conectado </span> </h3>
+        </section>
+        <section id="section8">
+            <h2> Detección de la cámara web </h2>
+            <video src="" id="webcam" class="webcam"></video>
+            <button class="btn" id="active-camera">Activar Camara</button>
+        </section>
+        <section id="section9">
+            <h2> Geolocalización </h2>
+            <span>Tu posición actual es</span>
+            <ul>
+                <li>Latitud: <span class="geolocation-data" id="latitude">- - -</span></li>
+                <li>Longitud: <span class="geolocation-data" id="longitude">- - -</span></li>
+                <li>Presición: <span class="geolocation-data" id="accuracy">- - -</span></li>
+            </ul>
+            <div id="current-position-map"></div>
+            <button id="geolocation-btn" class="btn">Ver ubicación</button>
+        </section>
+        <section id="section10">
+            <h2> Buscador </h2>
+            <input id="search" placeholder="¿Qué quieres buscar?" class="search-input" type="text">
+            <div class="cards-container">
+                <figure class="card">
+                    <img src="https://www.picnic-sun.com/images/planes/picnic-pareja.jpg" alt="">
+                    <figcaption>pareja</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="https://www.picnic-sun.com/images/planes/picnic-grupal.jpg" alt="">
+                    <figcaption>grupal</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="https://www.picnic-sun.com/images/galeria/card6/picnic-matrimonio-4.jpg" alt="">
+                    <figcaption>boda</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="https://www.picnic-sun.com/images/galeria/card1/img-picnic-cucuta-familia1.jpg" alt="">
+                    <figcaption>familiar</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="https://www.picnic-sun.com/images/galeria/card3/picnic-cucuta-decoracion-hotel-3.jpg"
+                        alt="">
+                    <figcaption>hotel</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="https://www.picnic-sun.com/images/galeria/card2/picnic-cumpleanos-parque-playa1.jpg"
+                        alt="">
+                    <figcaption>cumpleaños</figcaption>
+                </figure>
+            </div>
+        </section>
+        <section id="section11">
+            <h2> Sorteo digital</h2>
+            <div class="lottery-title">
+                <h2 id="winner"></h2>
+                <h2 id="countdown-lottery"></h2>
+            </div>
+            <ul id="participants">
+            </ul>
+            <div class="buttons-container">
+                <button id="lottery-btn" class="btn">Realizar sorteo</button>
+                <button id="lottery-btn-reset" class="btn">Reiniciar</button>
+            </div>
+        </section>
+        <section id="section12">
+            <h2> Responsive Slider </h2>
+            <div class="slider-container">
+                <div class="slide">
+                    <img src="https://img.freepik.com/vector-gratis/ilustracion-concepto-seo_114360-5576.jpg?size=626&ext=jpg"
+                        alt="">
+                </div>
+                <div class="slide">
+                    <img src="https://img.freepik.com/vector-gratis/concepto-diseno-web-presentacion-contenido-paginas-web-composicion-diseno-sitio-web-desarrollo-color-idea-tecnologia-informatica-ilustracion-vectorial-plana_613284-1991.jpg?size=626&ext=jpg"
+                        alt="">
+                </div>
+                <div class="slide">
+                    <img src="https://img.freepik.com/vector-premium/consiga-ilustracion-3d-pruebas-software_203633-2658.jpg?size=626&ext=jpg"
+                        alt="">
+                </div>
+                <div class="slider-buttons">
+                    <button id="prev" class="slider-button">&blacktriangleleft;</button>
+                    <button id="next" class="slider-button">&blacktriangleright;</button>
+                </div>
+            </div>
+        </section>
+        <section id="section13">
+            <h2> Video Inteligente </h2>
+            <video id="clever-video" class="video" loop src="assets/video/nature.mp4" controls></video>
+        </section>
+        <section id="section14">
+            <h2> Formulario de contacto (validaciones) </h2>
+            <form target="_blank" id="form-data" action="https://formsubmit.co/jeanpaul04042003@gmail.com" method="post"
+                class="tester-form">
+                <label for="name">
+                    Nombre
+                </label>
+                <input required pattern="[A-z]*" title="Debes escribir un nombre válido" id="name" class="form-input"
+                    placeholder="Escribe tu nombre..." type="text" name="name">
+                <small id="name-validation"></small>
+                <label for="email">
+                    Correo
+                </label>
+                <input required id="email" class="form-input" placeholder="Escribe tu correo..." type="text"
+                    name="email">
+                <small id="email-validation"></small>
+                <label for="matter">
+                    Asunto
+                </label>
+                <input required id="matter" class="form-input" placeholder="Asunto a tratar" type="text" name="matter">
+                <small id="matter-validation"></small>
+                <label for="comments">
+                    Comentarios
+                </label>
+                <textarea name="comments" id="comments" cols="30" rows="6"
+                    placeholder="Escribe tus comentarios..."></textarea>
+                <small id="comments-validation"></small>
+                <div class="buttons-container">
+                    <input required type="submit" value="Enviar" class="btn">
+                    <svg id="loader" class="loader" width="24" height="24" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 5V3m0 18v-2m-7-7H3m18 0h-2m-.5-6.5L17 7M7 17l-1.5 1.5M17 17l1.5 1.5M7 7L5.5 5.5"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </div>
+            </form>
+        </section>
+        <section id="section15">
+            <h2> Narrador </h2>
+            <div class="tester-form">
+                <select name="voices" id="voices">
+                    <option class="form-input" value="null" selected disabled>Selecciona una voz</option>
+                </select>
+                <textarea id="text-to-read" cols="30" rows="10"></textarea>
+            </div>
+            <button id="voices-button" class="btn">Leer texto</button>
+        </section>
+    </main>
+
+    <script src="js/libraries/confetti.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/watch.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/top-scroll.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/responsiveMedia.js"></script>
+    <script src="js/responsiveTester.js"></script>
+    <script src="js/userAgent.js"></script>
+    <script src="js/detectConection.js"></script>
+    <script src="js/detectCamera.js"></script>
+    <script src="js/geolocation.js"></script>
+    <script src="js/filter.js"></script>
+    <script src="js/lottery.js"></script>
+    <script src="js/responsiveSlider.js"></script>
+    <script src="js/scrollSpy.js"></script>
+    <script src="js/clever-video.js"></script>
+    <script src="js/form-validation.js"></script>
+    <script src="js/narrator.js"></script>
+
+</body>
+
+</html>
